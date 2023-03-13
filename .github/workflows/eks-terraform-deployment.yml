@@ -22,7 +22,7 @@ jobs:
     - name: Configure Terraform
       uses: hashicorp/setup-terraform@v1
       with:
-          terraform_version: "o.15"
+          terraform_version: "0.12.19"
      
     - name: Install Git
       run: sudo apt-get update && sudo apt-get install -y git 
