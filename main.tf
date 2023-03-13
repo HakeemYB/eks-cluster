@@ -1,6 +1,4 @@
-# provider "aws" {
-#   region = "${var.region}"
-# }
+
 
 terraform {
   required_providers {
@@ -13,7 +11,7 @@ terraform {
 
 
 module "eks" {
-   source = "git@github.com:HakeemYB/eks-modules.git"
+   source = "https://github.com/HakeemYB/eks-modules.git"
  
   
 }
