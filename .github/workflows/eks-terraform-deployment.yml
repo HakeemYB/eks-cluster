@@ -40,10 +40,7 @@ jobs:
         with:
           repository: HakeemYB/eks-modules.git
           ref: main
-          token: ${{ secrets.PAT }}
 
-
-      
       - name: Terraform init
         id: init
         run: terraform init 
