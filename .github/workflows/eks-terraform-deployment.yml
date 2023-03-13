@@ -31,8 +31,19 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         env:
           GITHUB_TOKEN: ${{ secrets.MY_PAT_SECRET }}
+          
+      - name: Install Git
+        run: sudo apt-get update && sudo apt-get install -y git
+        
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          repository: HakeemYB/https://github.com/HakeemYB/eks-modules.git
+          ref: main
+          token: ${{ secrets.PAT }}
 
 
+      
       - name: Terraform init
         id: init
         run: terraform init 
