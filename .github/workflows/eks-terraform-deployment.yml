@@ -38,7 +38,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          repository: HakeemYB/https://github.com/HakeemYB/eks-modules.git
+          repository: HakeemYB/eks-modules.git
           ref: main
           token: ${{ secrets.PAT }}
 
