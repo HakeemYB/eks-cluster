@@ -33,12 +33,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_PAT_SECRET }}
                   
 
-      - name: Terraform destroy
-        run: terraform destroy -auto-approve
         
       - name: Terraform init
         id: init
         run: terraform init
+        
+        
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve
         
       - name: Terraform plan
         id: plan
